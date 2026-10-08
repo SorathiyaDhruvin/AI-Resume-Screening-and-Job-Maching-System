@@ -9,7 +9,7 @@ class EmbeddingService:
     @classmethod
     def get_model(cls):
         if cls._model is None:
-            cls._model = SentenceTransformer(settings.MODEL_NAME)
+            cls._model = SentenceTransformer(settings.MODEL_NAME, device="cpu")
         return cls._model
 
     @classmethod
